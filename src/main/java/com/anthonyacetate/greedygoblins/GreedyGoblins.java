@@ -1,5 +1,6 @@
 package com.anthonyacetate.greedygoblins;
 
+import com.anthonyacetate.greedygoblins.item.ModCreativeModeTabs;
 import com.anthonyacetate.greedygoblins.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -75,7 +76,7 @@ public class GreedyGoblins
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

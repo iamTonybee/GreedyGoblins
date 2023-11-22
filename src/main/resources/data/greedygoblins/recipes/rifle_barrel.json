@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EnE",
+    "EnE"
+  ],
+  "key": {
+    "i": {
+      "item": "greedygoblins:eshirus_ingot"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:netherite_chestplate",
+    "count": 1
+  }
+}

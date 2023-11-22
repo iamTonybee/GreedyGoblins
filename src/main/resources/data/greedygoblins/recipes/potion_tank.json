@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EGE",
+    "GCG",
+    "EGE"
+  ],
+  "key": {
+    "E": {
+      "item": "greedygoblins:eshirus_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "greedygoblins:potion_tank",
+    "count": 1
+  }
+}
