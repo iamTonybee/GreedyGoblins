@@ -1,5 +1,6 @@
 package com.anthonyacetate.greedygoblins;
 
+import com.anthonyacetate.greedygoblins.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -64,7 +65,8 @@ public class GreedyGoblins
     public GreedyGoblins()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        //registers the ModItems class in main
+        ModItems.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -101,8 +103,10 @@ public class GreedyGoblins
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.ESHIRUS_INGOT);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
